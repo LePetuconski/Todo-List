@@ -25,6 +25,8 @@ npm run dev
 
 ## 📦 Desenvolvimento
 
+**Status**: Em desenvolvimento.
+
 - Na construção do projeto, foi utilizada uma API própria feita em **Express.js**, disponível aqui> (link).
 
 ## 🛠️ Construído com
