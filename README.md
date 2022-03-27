@@ -27,7 +27,7 @@ npm run dev
 
 **Status**: Em desenvolvimento.
 
-- Na construção do projeto, foi utilizada uma API própria feita em **Express.js**, disponível aqui> (link).
+- Na construção do projeto, foi utilizada uma API própria feita em **Express.js**, [disponível aqui](https://github.com/LePetuconski/Api-Todo-List).
 
 ## 🛠️ Construído com
 
@@ -45,7 +45,7 @@ Nós usamos [Git](https://git-scm.com/) para controle de versão.
 
 * **Letícia Petuconski** - *Dev* - [LePetuconski](https://github.com/LePetuconski)
 
-* **Luís Estareli** - *Instrutor* - [Snarloff](https://github.com/Snarloff)
+* **Luís Estareli** - *Instrutor & Dev* - [Snarloff](https://github.com/Snarloff)
 
 
 ## 📄 Licença
