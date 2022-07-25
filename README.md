@@ -1,4 +1,4 @@
-# To-do List 
+# To-do List  
 
 To-do List feita em **Nuxt.js**, inicialmente desenvolvida para uso pessoal.
 
