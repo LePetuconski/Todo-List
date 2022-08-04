@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # nuxtproject
+=======
+# To-do List  
+>>>>>>> e0b1e0fb4ccb0c483bad356f21bd88b7987f83a9
 
 ## Build Setup
 
@@ -42,7 +46,13 @@ Layouts are a great help when you want to change the look and feel of your Nuxt 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
 
 
+<<<<<<< HEAD
 ### `pages`
+=======
+**Status**: Em desenvolvimento.
+
+- Na construção do projeto, foi utilizada uma API própria feita em **Express.js**, [disponível aqui](https://github.com/LePetuconski/Api-Todo-List).
+>>>>>>> e0b1e0fb4ccb0c483bad356f21bd88b7987f83a9
 
 This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
 
@@ -58,7 +68,11 @@ More information about the usage of this directory in [the documentation](https:
 
 This directory contains your static files. Each file inside this directory is mapped to `/`.
 
+<<<<<<< HEAD
 Example: `/static/robots.txt` is mapped as `/robots.txt`.
+=======
+* **Luís Estareli** - *Instrutor & Dev* - [Snarloff](https://github.com/Snarloff)
+>>>>>>> e0b1e0fb4ccb0c483bad356f21bd88b7987f83a9
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
 
@@ -66,4 +80,8 @@ More information about the usage of this directory in [the documentation](https:
 
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
+<<<<<<< HEAD
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+=======
+---
+>>>>>>> e0b1e0fb4ccb0c483bad356f21bd88b7987f83a9
