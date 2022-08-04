@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-md-4">
-        <div class="card bg-secondary border-0 mb-0 mt-7">
+        <div class="card bg-secondary border-0 mb-0 mt-7" data-aos-duration="1000" data-aos="flip-right">
           <div class="card-body px-lg-5 py-lg-5">
-            <div class="text-center text-muted mb-4">
+            <div class="text-center text-muted">
               <small>Sign in with credentials</small>
             </div>
 
-            <Alert :type="type" :message="message" /> <!-- alerta dinamico -->
+            <Alert :type="type" :message="message" />
 
             <form method="post" @submit.prevent="login">
               <div class="form-group mb-3">
@@ -34,10 +34,11 @@
                 </label>
               </div>
               <div class="text-center">
-                <button type="submit" class="btn btn-primary my-4">Sign in</button><br/>
+                <button type="submit" class="btn btn-primary my-4">Sign in</button><br />
                 <small class="text-muted">Or <NuxtLink to="/register">click here</NuxtLink> to create an account</small>
               </div>
             </form>
+
           </div>
         </div>
       </div>
@@ -45,54 +46,59 @@
   </div>
 </template>
 
-<!-- <style scoped>
- Tudo que eu editar no css vai para esse código acima
-</style> !-->
-
 <script>
 
-import Alert from '~/components/Alert.vue'
+import Alert from '~/components/Alert'
 
 export default {
 
-  middleware:'guest',
+  middleware: 'guest',
 
   components: {
     Alert
   },
 
-    data() { //armazenar var
-        return{
-            email: '',
-            password: '',
-            type: '',
-            message: '',
-            counter: 1
-        }
-    },
+  data() {
+    return {
+      email: '',
+      password: '',
+      type: '',
+      message: '',
+      counter: 1
+    }
+  },
 
-    methods: {
-      async login(){
-        try {
-          let res = await this.$auth.loginWith('local', {
-            data: {
-              email: this.email,
-              password: this.password
-            }
-          })
+  methods: {
 
-          this.type = 'sucess'
+    async login() {
 
+      try {
 
-          
-        } catch (err){
-          this.type = 'danger'
-          this.message = err.response.data.erro
-        }
+        let a = await this.$auth.loginWith('local', {
+          data: {
+            email: this.email,
+            password: this.password
+          }
+        })
+
+        console.log(a);
+
+        this.type = 'success'
+        this.message = 'Logado com sucesso! Redirecionando em 3s'
+
+        setTimeout(() => {
+          this.$router.push('/dashboard')
+        }, 3000)
+
+      } catch (err) {
+        this.type = 'danger' // error
+        this.message = err.response.data.erro
       }
+
     }
 
-}
+  }
 
+}
 
 </script>

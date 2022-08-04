@@ -13,26 +13,20 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/argon-dashboard@1.2.0/assets/css/argon.css' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/argon-dashboard@1.2.0/assets/vendor/nucleo/css/nucleo.css' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/argon-dashboard@1.2.0/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css' },
     ],
-    script: [
-      { src: 'https://code.jquery.com/jquery-3.6.0.min.js' },
-      { src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js' },
-      { src: 'https://cdn.jsdelivr.net/npm/argon-dashboard@1.2.0/assets/js/argon.min.js' }
-    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'aos/dist/aos.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/tinymce', ssr: false },
     { src: '~/plugins/notification', ssr: true },
-    { src: '~/plugins/notification.client', ssr: false }
+    { src: '~/plugins/notification.client', ssr: false },
+    { src: '~/plugins/aos.client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -61,16 +55,23 @@ export default {
       local: {
 
         token: {
-          required:false,
+          required: false,
           type: 'Bearer'
         },
 
         endpoints: {
-          login: { url: '/login', method:'post', propertyName: false},
-          user: { url: '/user', method: 'get', propertyName: false},
+          login: { url: '/login', method: 'post', propertyName: false },
+          user: { url: '/user', method: 'get', propertyName: false },
           logout: false
         }
+
       }
+    },
+
+    redirect: {
+      login: '/login', 
+      logout: '/',
+      home: '/'
     }
   },
 
